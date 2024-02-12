@@ -1,5 +1,7 @@
 extends Node2D
 
+var is_draggible = false
+
 ##quit button
 func _on_button_pressed():
 	get_tree().quit()

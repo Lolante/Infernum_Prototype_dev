@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2r7v4loafbfr"]
+
+[sub_resource type="GDScript" id="GDScript_s8hgc"]
+script/source = "extends StaticBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	modulate = Color(Color.ALICE_BLUE)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if main.is_draggible:
+		visible = true
+	else:
+		false
+"
+
+[node name="Character_card_platform" type="StaticBody2D" groups=["dropable"]]
+script = SubResource("GDScript_s8hgc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
