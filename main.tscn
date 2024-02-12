@@ -24,6 +24,8 @@ offset_left = 20.0
 offset_top = 332.0
 offset_right = 146.0
 offset_bottom = 409.0
+tooltip_text = "Does not work !!!!!
+"
 text = "Multiplayer"
 
 [node name="Button4" type="Button" parent="."]
@@ -32,6 +34,15 @@ offset_top = 223.0
 offset_right = 146.0
 offset_bottom = 300.0
 text = "dev-test"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 323.0
+offset_top = 16.0
+offset_right = 837.0
+offset_bottom = 76.0
+text = "Infernum-Prototype"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
