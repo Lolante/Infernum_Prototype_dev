@@ -11,10 +11,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if main.is_draggible:
-		visible = true
-	else:
-		false
 "
 
 [node name="Character_card_platform" type="StaticBody2D" groups=["dropable"]]
