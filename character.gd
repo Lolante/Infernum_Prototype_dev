@@ -1,4 +1,5 @@
 ## Character Properties
+extends Node
 class_name Character
 
 var Name: String
@@ -23,6 +24,7 @@ var maxEP: float
 var maxMP: float
 var maxUP: int
 
+@warning_ignore("shadowed_variable_base_class")
 func _init(name: String, _star: Star, _essence: Essence, lp: float, ep: float, up: int):
 	Name = name
 	maxLP = lp

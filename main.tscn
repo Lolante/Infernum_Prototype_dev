@@ -44,7 +44,16 @@ text = "Infernum-Prototype"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Button5" type="Button" parent="."]
+offset_left = 844.0
+offset_top = 460.0
+offset_right = 1079.0
+offset_bottom = 584.0
+text = "Print Character
+Proporties to Console"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
