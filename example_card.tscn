@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi8f14e7y53nt"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_drqj5"]
+[ext_resource type="Texture2D" uid="uid://dq4r162xsgcpe" path="res://icon.svg" id="2_vighi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1dnl"]
+size = Vector2(123, 122)
+
+[node name="example_card" type="Node2D"]
+script = ExtResource("1_drqj5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vighi")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_m1dnl")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

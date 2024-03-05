@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://63ms07yh6xup"]
+[gd_scene load_steps=5 format=3 uid="uid://63ms07yh6xup"]
 
 [ext_resource type="Texture2D" uid="uid://bfjd3i58fs6d7" path="res://Infernum_Prototype_data/Textures/backgroundcolor.png" id="1_5lduk"]
 [ext_resource type="Script" path="res://board.gd" id="1_ucdlw"]
+[ext_resource type="PackedScene" uid="uid://b2r7v4loafbfr" path="res://character_card_platform.tscn" id="3_pn0gi"]
+[ext_resource type="PackedScene" uid="uid://bi8f14e7y53nt" path="res://example_card.tscn" id="4_uec35"]
 
 [node name="Board" type="Node2D"]
 script = ExtResource("1_ucdlw")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("1_5lduk")
@@ -17,5 +20,20 @@ offset_top = 2.0
 offset_right = 1148.0
 offset_bottom = 33.0
 text = "Return"
+
+[node name="Character_card_platform" parent="." instance=ExtResource("3_pn0gi")]
+position = Vector2(288, 325)
+
+[node name="Character_card_platform2" parent="." instance=ExtResource("3_pn0gi")]
+position = Vector2(951, 325)
+
+[node name="example_card" parent="." instance=ExtResource("4_uec35")]
+position = Vector2(337, 558)
+
+[node name="example_card2" parent="." instance=ExtResource("4_uec35")]
+position = Vector2(563, 558)
+
+[node name="example_card3" parent="." instance=ExtResource("4_uec35")]
+position = Vector2(796, 552)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

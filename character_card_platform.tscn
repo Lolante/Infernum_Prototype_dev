@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2r7v4loafbfr"]
+[gd_scene load_steps=3 format=3 uid="uid://b2r7v4loafbfr"]
 
 [sub_resource type="GDScript" id="GDScript_s8hgc"]
 script/source = "extends StaticBody2D
@@ -17,10 +17,15 @@ func _process(delta):
 		visible = false
 "
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdy0a"]
+size = Vector2(128, 127)
+
 [node name="Character_card_platform" type="StaticBody2D" groups=["dropable"]]
 script = SubResource("GDScript_s8hgc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_cdy0a")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -64.0
