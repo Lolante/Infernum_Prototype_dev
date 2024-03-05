@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterProperties" load_steps=2 format=3 uid="uid://m6mnsv5oje7m"]
+
+[ext_resource type="Script" path="res://character_properties.gd" id="1_pnpdf"]
+
+[resource]
+script = ExtResource("1_pnpdf")
+Name = ""
+StarLevel = ""
+Essence = ""
+maxLP = 0.0
+maxEP = 0.0
+maxMP = 0.0
+maxUP = 0
